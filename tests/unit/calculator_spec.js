@@ -16,6 +16,18 @@ describe('calculator', function () {
     calculator.add(4);
     assert.equal(calculator.runningTotal, 8);
   })
+  
+  it('should be able to add 0', function() {
+    calculator.previousTotal = 0;
+    calculator.add(0);
+    assert.equal(calculator.runningTotal, 0);
+  })
+  
+  it('should be able to add 0', function() {
+    calculator.previousTotal = 0;
+    calculator.add(4);
+    assert.equal(calculator.runningTotal, 4);
+  })
 
   it('should be able to subtract', function() {
     calculator.previousTotal = 4;
